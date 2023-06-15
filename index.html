@@ -1,1 +1,53 @@
-Hola cvomo estan sdgdfgdgdgdfgdfg
+ <!DOCTYPE html>
+ <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador</title>
+        <link rel="shortcut icon" href="assets/Images/favicon.ico">
+        <!-- Style --> 
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script type="text/javascript" src="./assets/js/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="./assets/Images/Logo.png">
+        </header>
+        <main> 
+            <div class="box-content">
+                <!-- Campo para el texto que va a ser encriptado/desencriptado -->
+                <textarea id="send-info" class="box-text" rows="8" placeholder="Ingrese el texto aqui"></textarea>
+            
+                <!-- botón para encriptar / botón para desencriptar -->               
+                <div class="box-footer"> 
+                    <div class="footer-info" >
+                        <img src="./assets/Images/Vector.svg">
+                        <p>Solo letras minúsculas y sin acentos</p>
+                    </div>
+                    <div class="footer-btn">
+                        <button type="button" class="btn-Encriptar" onclick="Encriptar()">Encriptar</button>
+                        <button type="button" class="btn-Desencriptar" onclick="Desencriptar()">Desencriptar</button>
+                    </div>
+                </div> 
+            </div>
+            <!-- Área para mostrar el texto encriptado/desencriptado -->
+            <div class="box-card">
+                
+                <div id="info" class="card-info">                  
+                    <textarea id="get-info" rows="12"></textarea>
+                    <button type="button" class="btn-Copiar" onclick="Copiar()">Copiar</button>
+                </div>
+                
+                <div id="info-empty" class="card-info-empty">
+                    <img src="./assets/Images/Muñeco.png">                   
+                    <h2>
+                        <b>Ningún mensaje fue encontrado</b>
+                    </h2>
+                    <p>
+                        Ingresa el texto que desees encriptar o desencriptar.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+ </html>
