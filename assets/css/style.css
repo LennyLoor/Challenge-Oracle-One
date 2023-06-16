@@ -48,10 +48,22 @@ header img{
     background: transparent;
     cursor: pointer;
     resize:none;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(38) 0.5s 1 normal both, blink 0.5s steps(1) infinite;
 }
 .box-text::placeholder{
-    color: #0A3871;
-}
+    color: #0A3871; 
+} 
+@keyframes typing { 
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
 .box-text:active, 
 .box-text:focus
 {
@@ -129,10 +141,18 @@ header img{
     color: #D8DFE8; 
     order: 0; 
 }
+.btn-Encriptar:hover{
+    background-color: #145bb3; 
+    transition: .5s;
+}
 .btn-Desencriptar{     
     background: #D8DFE8; 
     border: 1px solid #0A3871;   
     order: 1;
+}
+.btn-Desencriptar:hover{
+    background-color: #cfddf0; 
+    transition: .5s;
 }
 
  /* CARD */
@@ -199,11 +219,25 @@ textarea:focus{
     z-index: 2;  
     cursor: pointer;
 }
+.btn-Copiar:hover{
+    background-color: #0A3871; 
+    color: white;
+    transition: 1s;
+}
 .card-info-empty{
     width: 250px;
     margin: 3em auto;
     text-align: center;
-}
+    animation: zoom-img 1.5s ;
+} 
 .card-info-empty img{
     width: 100%;
+}
+@keyframes zoom-img {
+    0% {
+      transform: scale(0);
+    } 
+    100% {
+      transform: scale(1);
+    }
 }
