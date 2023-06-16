@@ -1,4 +1,10 @@
 
+@media screen and (max-width:1024px){
+    .box-content {
+        left: 106px;
+    } 
+}
+
 @media screen and (max-width:768px){
     .box-content {
         width: 80%;
