@@ -1,61 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 html, body{
-    background: #F3F5FC;
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0 auto;
+}
+body{ 
     font-family: 'Inter', sans-serif;
+    background: rgb(28,53,113);
+    background: linear-gradient(180deg, rgba(28,53,113,1) 0%, rgba(19,104,159,1) 100%);
 }
-/* HEADER */
-header{ 
-    position: relative;
-    top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 40px;
-    z-index: 2; 
+
+header img{  
+    width: 100px; 
+    margin: 1rem;
 }
-header img{
-    width: 120px;
-    height: 48px;
-    margin-left: 40px;
-    user-select: none;
-}
- /* CONTENT */
-.box-content{ 
-    width: 40%;
-    position: absolute;
-    left: 158px;
-    top: 110px;
-    bottom: 40px;
-} 
-/* input */
-.box-text{     
+
+main{ 
+    display: inline-flex;
     width: 100%;
-    max-height: 80%;
-    box-sizing: border-box;
+    height: calc(100% - 115px); 
+}
+.main-box{ 
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+/* -----------------------------------------
+              CREAR DATOS
+-------------------------------------------*/
+.box-content{ 
+    width: 55%;
+    padding: 3rem 0;
+    position: relative;
+}
+.box-content > textarea{
+    width: 100%;
+    min-height: calc(100% - 133px);
+    box-sizing: border-box; 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 1.5rem;
     line-height: 150%;
-    user-select: none; 
-    /* Dark blue/dark-blue-300 */
-    color: #0A3871;
+    resize:none;
+    overflow: hidden;
+    color: white;
     border: none;
     background: transparent;
     cursor: pointer;
-    resize:none;
-    width: 0;
-    overflow: hidden;
-    white-space: nowrap;
+}
+.box-text{
     animation: typing 4s steps(38) 0.5s 1 normal both, blink 0.5s steps(1) infinite;
 }
-.box-text::placeholder{
-    color: #0A3871; 
-} 
 @keyframes typing { 
     from {
       width: 0;
@@ -63,26 +61,16 @@ header img{
     to {
       width: 100%;
     }
-  }
-.box-text:active, 
-.box-text:focus
-{
-    border: none;
-    background: transparent;
-    outline: none;
-} 
-/* FOOTER */
-.box-footer{ 
-    padding: 0px;
-    gap: 8px;
+}
+.box-content > textarea::placeholder{
+    color: rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+}
+.box-footer{
     position: absolute;
+    bottom: 3rem; 
     width: 100%;
-    box-sizing: border-box;
-    height: auto;
-    left: 0;
-    bottom: 30px;
-    color: #495057;
-} 
+}
 .footer-info{
     display: flex;
     flex-direction: row;
@@ -98,14 +86,14 @@ header img{
     flex-grow: 0;
 }
 .footer-info p{
-    width: 205px;
+    width: 100%;
     height: 18px;    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;    
-    color: #495057;    
+    font-size: .8rem;
+    line-height: 150%;   
+    color: white;
     opacity: 0.8;       
     flex: none;
     order: 1;
@@ -115,8 +103,7 @@ header img{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
-    gap: 20px;
+    justify-content: space-between;
 }
 .footer-btn >button{
     display: flex;
@@ -131,7 +118,7 @@ header img{
     cursor: pointer;
     width: 48.3%;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 19px;
     text-align: center;
 } 
@@ -142,8 +129,9 @@ header img{
     order: 0; 
 }
 .btn-Encriptar:hover{
-    background-color: #145bb3; 
-    transition: .5s;
+    background: #1386bf;
+    border: 1px solid #1386bf;
+    transition: 1s;
 }
 .btn-Desencriptar{     
     background: #D8DFE8; 
@@ -151,47 +139,58 @@ header img{
     order: 1;
 }
 .btn-Desencriptar:hover{
-    background-color: #cfddf0; 
-    transition: .5s;
+    background: #1386bf;
+    border: 1px solid #1386bf;
+    color: #D8DFE8; 
+    transition: 1s;
 }
 
- /* CARD */
+
+/* -----------------------------------------
+            CAMPO DE INFORMACION
+-------------------------------------------*/
 .box-card{
-    width: 400px;
-    position: absolute;
-    right: 40px;
-    top: 40px;
-    bottom: 40px; 
-    /* White */
-    background: #FFFFFF;
-    /* shadow */
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
+    background-color: rgba(255,255,255,0.2);
+    padding: 3rem;
+    border-radius: 2.5rem;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); 
+    user-select: none;
     display: flex;
     align-items: center;
 }
-.card-info{ 
+.box-card img{
     width: 100%;
-    height: 90%; 
-    margin: 32px;    
-    position: relative;
-    display: none;
 }
-.card-info img{    
-    user-select: none;
+.box-card h2{
+    margin-top: 2rem;
 }
-.card-info textarea{ 
+.box-card p{
+    margin: 0;
+}
+.card-info-empty{
+    width: 380px;
+    margin: 0 auto;  
+}
+.card-info{
+    width: 380px;
+    height: 100%;
+    position: relative; 
+}
+.card-info textarea{
     width: 100%;
-    resize:none;
-    height: auto; 
+    box-sizing: border-box;  
+    resize:none; 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1rem;
     line-height: 150%; 
-    color: #495057;
+    color: white;
     background-color: transparent;
     border: none;
+    overflow: hidden;
 }
 textarea:active, 
 textarea:focus{
@@ -212,7 +211,7 @@ textarea:focus{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 19px;
     text-align: center; 
     color: #0A3871; 
@@ -224,10 +223,15 @@ textarea:focus{
     color: white;
     transition: 1s;
 }
-.card-info-empty{
-    width: 250px;
-    margin: 3em auto;
-    text-align: center;
+
+::selection{
+    background-color: white;
+    color:#0A3871;
+} 
+#info{
+    display: none;
+}
+.card-info-empty{ 
     animation: zoom-img 1.5s ;
 } 
 .card-info-empty img{
